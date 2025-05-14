@@ -1,0 +1,22 @@
+<div class="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-gray-100 to-gray-200 p-6">
+  <div class="space-x-4 mb-6">
+    <button
+      (click)="showMessage()"
+      *ngIf="!isDisplayed"
+      class="px-6 py-2 rounded-lg bg-blue-600 text-white shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300"
+    >
+      Show Message
+    </button>
+    <button
+      (click)="hideMessage()"
+      *ngIf="isDisplayed"
+      class="px-6 py-2 rounded-lg bg-red-600 text-white shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 transition duration-300"
+    >
+      Hide Message
+    </button>
+  </div>
+
+  <h1 *ngIf="isDisplayed" class="text-4xl font-extrabold text-gray-800 transition-opacity duration-500">
+    Task Decorator
+  </h1>
+</div>
